@@ -1,0 +1,56 @@
+<div class="homepage">
+  <div class = "navbar navbar-inverse navbar-static-top">
+    <div class = "container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span>
+        </button>
+        <a href="#" class = "navbar-brand">Let's Cook Something!</a>
+      </div>
+      <center>
+        <div id="navbar" class="navbar-collapse collapse">
+          <% if !signed_in? %>
+            <%= form_for :session, :html => {class: 'navbar-form navbar-right'}, url: sessions_path do |f| %>
+              <div class="form-group">
+                <%= f.text_field :email, :class => 'form-control', :placeholder => 'Email' %>
+              </div>
+              <div class="form-group">
+                <%= f.password_field :password, :class => 'form-control', :placeholder => 'Password' %>
+              </div>
+              <%= f.submit 'Sign in', id: 'signin', :class => 'btn btn-primary' %>
+            <% end %>
+          <% else %>
+            <div class="navbar-welcome navbar-right">Welcome <%= current_user.name %>!</div>
+          <% end %>
+        </div>
+      </center>
+    </div>
+  </div>
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="main__wrapper">
+            <h1 class="main__wrapper__header">Let's Cook Something!</h1>
+            <%= form_tag("/search_results", method: "get", :class => "main__wrapper__form") do %>
+              <div class="input-group">
+                <%= text_field_tag(:q, nil, :placeholder => "What do you want to eat today?", :class => "form-control input-lg") %>
+                <span class="input-group-btn">
+                  <%= submit_tag("Search", :class => "btn btn-primary btn-lg") %>
+                </span>
+              </div>
+            <% end %>
+            <% if signed_in? %>
+              <div class="main__wrapper__create-your-own">
+                <%= link_to "Create your own recipe", new_user_recipe_path(current_user), :class => "" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

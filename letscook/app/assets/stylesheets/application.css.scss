@@ -1,0 +1,428 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "bootstrap";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+body {
+  background-color: #EEEEEE;
+  background-size: tile;
+  font-family: "Roboto", arial, helvetica, sans-serif;
+}
+
+.homepage {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: image-url('pizza.jpg') center fixed transparent;
+  background-size: cover;
+
+  .main {
+    &__wrapper {
+      background: rgba(0, 0, 0, .85);
+      margin: auto;
+      padding: 50px;
+      text-align: center;
+      margin-top: 200px;
+      -webkit-border-radius: 18px;
+      -moz-border-radius: 18px;
+      border-radius: 18px;
+
+      @media screen and (min-width: 320px) and (max-device-width : 736px) {
+        margin-top: 50px;
+        padding: 50px 20px;
+      }
+
+      &__header {
+        color: #fff;
+        font-weight: 300;
+        margin: 0;
+        padding-bottom: 30px;
+
+        @media screen and (min-width: 320px) and (max-device-width : 736px) {
+          font-size: 25px;
+        }
+      }
+
+      &__form {
+        color: red;
+        .form-control {
+          @media screen and (min-width: 320px) and (max-device-width : 736px) {
+            font-size: 12px;
+          }
+        }
+      }
+
+      &__create-your-own {
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+
+div.search_results {
+  background-color:white;
+  border: 5px solid black;
+  overflow: hidden;
+  margin: 10px 0 10px auto;
+  width: 75%;
+}
+
+.search_results h1 {
+  color:#336699;
+  font-family: 'Nixie One', Courier;
+  font-size:60px;
+  margin: 20px;
+}
+.search_results li {
+  font-size: 40px;
+  list-style: none;
+  overflow: hidden;
+  position:relative;
+}
+
+.search_results img {
+  border: 4px solid black;
+  float:left;
+  height: 300px;
+  margin:10px 50px 10px 20px;
+  overflow:hidden;
+  padding:10px;
+  width: 300px;
+}
+
+.search_results a {
+  color: black;
+  text-decoration: none;
+}
+
+.search_results a:hover {
+  text-decoration: underline;
+}
+
+.search_results p {
+  margin:130px;
+ }
+
+
+div.search_result {
+  background-color:white;
+  border: 5px solid black;
+  overflow: hidden;
+  margin: 10px 0 10px auto;
+  width: 75%;
+}
+
+.search_result .backbutton a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.search_result .backbutton a:hover {
+  text-decoration: none;
+}
+
+.search_result h1 {
+  color:#336699;
+  font-family: 'Nixie One', Courier;
+  font-size:60px;
+  margin: 0;
+  text-align: center;
+}
+
+.search_result img {
+  border: 5px solid black;
+  margin-left: 15px;
+  width: 100%;
+}
+
+.search_result #image {
+  float:left;
+  margin: 0 auto;
+  padding: 20px;
+  position:fixed;
+  width: 300px;
+}
+
+#create {
+  background-color: #336699;
+  border: 1px solid #336699;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: bold;
+  -moz-border-radius: 100px;
+  padding: 10px 20px 11px;
+  text-shadow: 1px 1px #336699;
+  -webkit-border-radius: 100px;
+}
+
+.search_result .nav {
+  margin: 20px;
+  text-align: center;
+}
+
+
+.search_result .everythingbutimg {
+  float:right;
+  width: 550px;
+  padding:10px;
+  margin-bottom:20px;
+}
+
+.search_result p.description {
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 25px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.search_result .details {
+  font-family: 'Nixie One', Courier;
+  font-size: 20px;
+  font-weight:bold;
+  padding: 0 20px;
+
+}
+
+.search_result .ingredients {
+  display: block;
+  font-family: 'Nixie One', Courier;
+  padding: 0 20px;
+  margin: 0;
+}
+.search_result .ingredients p {
+  font-size: 20px;
+  font-weight:bold;
+}
+
+.search_result .ingredients ul {
+  font-size: 20px;
+  list-style: none;
+}
+
+.search_result .instructions {
+  display: block;
+  font-family: 'Nixie One', Courier;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.search_result .instructions p {
+  font-size: 20px;
+  font-weight:bold;
+}
+
+.search_result .instructions ol {
+  font-size: 20px;
+}
+
+.userpage {
+  background-color:white;
+  border: 3px solid black;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align:center;
+  width: 400px;
+}
+.signinpage {
+  background-color:white;
+  border: 3px solid black;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align:center;
+  width: 400px;
+}
+
+.signinpage h1 {
+  color: #336699;
+  font-family: 'Nixie One', Courier;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top:60px;
+}
+
+.signinpage form label{
+  font-size: 20px;
+  margin: 20px 0 20px 20px;
+
+}
+
+.signinpage form input{
+  font-size: 20px;
+  margin: 20px 20px 20px 0;
+
+}
+
+.signinpage form #signin{
+  font-size:70px;
+}
+
+.signuppage {
+  background-color:white;
+  border: 3px solid black;
+  margin: 20px auto;
+  overflow: hidden;
+  text-align:center;
+  width: 600px;
+}
+
+.signuppage h1 {
+  color: #336699;
+  font-family: 'Nixie One', Courier;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top:60px;
+
+}
+
+.signuppage form label{
+  font-size: 20px;
+  margin: 20px 0 20px 20px;
+
+}
+
+.signuppage form input{
+  font-size: 20px;
+  margin: 20px 20px 20px 0;
+
+}
+
+.signuppage form #submit{
+  font-size:70px;
+}
+div.grocery_list {
+  background:url("http://image.naldzgraphics.net/2012/08/28-Pristine.jpg");
+  background-size:contain;
+  border: 5px solid black;
+  overflow: hidden;
+  padding: 50px;
+  margin: 10px 0 10px auto;
+  width: 65%;
+}
+
+.grocery_list h1 {
+  color: #336699;
+  font-family: 'Nixie One', Courier;
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 0;
+  text-align:center;
+}
+
+.grocery_list li {
+  font-size: 30px;
+  padding: 5px;
+}
+
+.grocery_list li a {
+  color:black;
+  text-decoration: none;
+}
+
+.grocery_list li a:hover {
+  text-decoration: underline;
+}
+
+.grocery_list input {
+  font-size:30px;
+  text-align:center;
+}
+
+div.usercookbook {
+  background:white;
+  border: 5px solid black;
+  padding: 50px;
+  overflow: hidden;
+  margin: 10px 0 10px auto;
+  width: 65%;
+}
+
+.usercookbook h1 {
+  color: #336699;
+  font-family: 'Nixie One', Courier;
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 0;
+  text-align:center;
+}
+
+.usercookbook li {
+  font-size: 30px;
+  padding: 5px;
+}
+
+.usercookbook li a {
+  color:black;
+  text-decoration: none;
+}
+
+.usercookbook li a:hover {
+  text-decoration: underline;
+}
+
+.usercookbook input {
+  font-size:30px;
+  text-align:center;
+}
+
+div.recipeform {
+  background-color:white;
+  border: 3px solid black;
+  padding:20px;
+  overflow: hidden;
+  margin: 10px 0 10px auto;
+  width: 70%;
+  text-align:center;
+}
+
+.recipeform h1 {
+  color: #336699;
+  font-family: 'Nixie One', Courier;
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 0;
+  text-align:center;
+}
+
+.recipeform form label{
+  font-size: 25px;
+  margin: 20px 0 20px 20px;
+
+}
+.recipeform form input{
+  font-size: 25px;
+  margin: 20px 20px 20px 0;
+}
+
+.recipeform form textarea{
+  font-size: 25px;
+  height: 75px;
+  margin: 20px 20px 20px 0;
+  width: 500px;
+}
